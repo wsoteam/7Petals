@@ -20,7 +20,7 @@ public class ActivityOnboarding extends AppCompatActivity {
         FragmentManager  fm = getSupportFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.fl_onboarding);
         if (fragment == null) {
-            fragment = new FragmentRegFerst();
+            fragment = new FragmentOnboardingPremium();
             fm.beginTransaction()
                     .add(R.id.fl_onboarding, fragment)
                     .commit();

@@ -17,6 +17,11 @@
 
     <!--onboarding_fragment_start-->
     <string name="onb_tv_great">Отлично!</string>
-    <string name="onb_tv_text">Теперь давая я расскажу про наш сервис подробнее</string>
+    <string name="onb_tv_text">Теперь давай я расскажу про наш сервис подробнее</string>
     <string name="onb_btn_next">Дальше</string>
+
+
+    <!--onboarding_fragment_premium-->
+    <string name="onb_btn_premium">Обновить до Premium</string>
+    <string name="onb_tv_close_premium">Нет, я подключу услугу позже</string>
 </resources>
