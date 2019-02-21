@@ -3,4 +3,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="nav_diary">Дневник</string>
+    <string name="nav_profile">Профиль</string>
+    <string name="nav_recipes">Рецепты</string>
+    <string name="nav_premium">Premium</string>
+    <string name="nav_conversation">Общение</string>
 </resources>
