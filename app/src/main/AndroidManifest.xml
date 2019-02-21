@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".registration.ActivityRegistration"></activity>
-        <activity android:name=".onboarding.ActivityOnboarding" />
+        <activity android:name=".registration.ActivityRegistration"
+            android:theme="@style/AppThemeNoActionBar"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".onboarding.ActivityOnboarding"
+            android:theme="@style/AppThemeNoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

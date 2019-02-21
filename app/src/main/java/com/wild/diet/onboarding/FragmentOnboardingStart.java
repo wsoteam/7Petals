@@ -1,4 +1,5 @@
-package com.wild.diet.registration;
+package com.wild.diet.onboarding;
+
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,12 +11,13 @@ import android.view.ViewGroup;
 
 import com.wild.diet.R;
 
-public class FragmentRegFerst extends Fragment {
+public class FragmentOnboardingStart extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        final View view = inflater.inflate(R.layout.registration_fragment_ferst, null);
+        final View view = inflater.inflate(R.layout.onboarding_fragment_start, null);
         return view;
     }
+
 }

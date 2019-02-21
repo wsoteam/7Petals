@@ -5,5 +5,18 @@
     <string name="title_notifications">Notifications</string>
 
 
-    <string name="reg_hello">Добро пожаловать!</string>
+    <!--registration_fragment_ferst-->
+    <string name="reg_et_hello">Добро пожаловать!</string>
+    <string name="reg_et_have_account">Есть аккаунт?</string>
+    <string name="reg_btn_reg">Регистрация</string>
+    <string name="reg_btn_login">Войти</string>
+    <string name="todo">TODO</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--onboarding_fragment_start-->
+    <string name="onb_tv_great">Отлично!</string>
+    <string name="onb_tv_text">Теперь давая я расскажу про наш сервис подробнее</string>
+    <string name="onb_btn_next">Дальше</string>
 </resources>

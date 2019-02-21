@@ -1,11 +1,16 @@
 package com.wild.diet;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+
+import com.wild.diet.onboarding.ActivityOnboarding;
+import com.wild.diet.registration.ActivityRegistration;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,9 +41,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        startActivity(new Intent(this, ActivityOnboarding.class));
+
+
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
     }
 
 }
