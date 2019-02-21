@@ -1,4 +1,4 @@
-package com.wild.diet.BranchFoodSearch.FoodObjects;
+package com.wsoteam.diet.BranchFoodSearch.FoodObjects;
 
 import com.orm.SugarRecord;
 

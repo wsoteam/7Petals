@@ -1,4 +1,4 @@
-package com.wild.diet.MainScreen.Fragments;
+package com.wsoteam.diet.MainScreen.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,13 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.wild.diet.R;
+import com.wsoteam.diet.R;
 
-public class FragmentDiary extends Fragment {
+public class FragmentProfile extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.ms_fragment_diary, container, false);
+        View view = inflater.inflate(R.layout.ms_fragment_profile, container, false);
 
         return view;
     }

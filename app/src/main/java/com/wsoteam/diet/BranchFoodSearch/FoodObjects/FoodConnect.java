@@ -1,5 +1,5 @@
 
-package com.wild.diet.BranchFoodSearch.FoodObjects;
+package com.wsoteam.diet.BranchFoodSearch.FoodObjects;
 
 import com.squareup.moshi.Json;
 

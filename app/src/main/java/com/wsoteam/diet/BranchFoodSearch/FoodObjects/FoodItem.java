@@ -1,7 +1,4 @@
-package com.wild.diet.BranchFoodSearch.FoodObjects;
-
-import com.orm.SugarRecord;
-import com.squareup.moshi.Json;
+package com.wsoteam.diet.BranchFoodSearch.FoodObjects;
 
 import java.io.Serializable;
 

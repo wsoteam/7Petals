@@ -1,4 +1,4 @@
-package com.wild.diet.BranchFoodSearch;
+package com.wsoteam.diet.BranchFoodSearch;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,8 +8,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.wild.diet.BranchFoodSearch.FoodObjects.FoodItem;
-import com.wild.diet.R;
+import com.wsoteam.diet.BranchFoodSearch.FoodObjects.FoodItem;
+import com.wsoteam.diet.R;
 
 import java.util.ArrayList;
 
