@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(new Intent(this, ActivityOnboarding.class));
+        startActivity(new Intent(this, ActivityRegistration.class));
 
 
         mTextMessage = (TextView) findViewById(R.id.message);

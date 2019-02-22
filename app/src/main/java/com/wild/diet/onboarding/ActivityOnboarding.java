@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.wild.diet.R;
-import com.wild.diet.registration.FragmentRegFerst;
 
 public class ActivityOnboarding extends AppCompatActivity {
 
@@ -20,7 +19,7 @@ public class ActivityOnboarding extends AppCompatActivity {
         FragmentManager  fm = getSupportFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.fl_onboarding);
         if (fragment == null) {
-            fragment = new FragmentOnboardingPremium();
+            fragment = new FragmentOnboardingStart();
             fm.beginTransaction()
                     .add(R.id.fl_onboarding, fragment)
                     .commit();

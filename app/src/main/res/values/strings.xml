@@ -24,4 +24,19 @@
     <!--onboarding_fragment_premium-->
     <string name="onb_btn_premium">Обновить до Premium</string>
     <string name="onb_tv_close_premium">Нет, я подключу услугу позже</string>
+
+    <!--onboarding_fragment_spinner-->
+    <string name="tv_tets">Контролируйте то, что вы едите. Автоматический расчет белков, жиров углеводов.</string>
+
+
+    <!--registration_fragment_main-->
+    <string name="reg_tv_hou_copmfortable">Как тебе удобней входить в систему?</string>
+    <string name="reg_tv_contract">Условия предоставления услуг</string>
+    <string name="reg_btn_google">Войти через Google</string>
+    <string name="reg_btn_facebook">Войти через Facebook</string>
+    <string name="reg_btn_reg_email">Регистрация по Email</string>
+
+    <!--registration_fragment_hello-->
+    <string name="reg_tv_hello">Привет!</string>
+    <string name="reg_tv_hello_body">Я твой консультант по питанию. Расскажи мне о себе.</string>
 </resources>
