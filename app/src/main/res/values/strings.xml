@@ -3,10 +3,49 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
     <string name="nav_diary">Дневник</string>
     <string name="nav_profile">Профиль</string>
     <string name="nav_recipes">Рецепты</string>
     <string name="nav_premium">Premium</string>
     <string name="nav_conversation">Общение</string>
     <string name="for_100_g_of_product"> Ккал на 100 г продукта</string>
+
+
+
+    <!--registration_fragment_ferst-->
+    <string name="reg_et_hello">Добро пожаловать!</string>
+    <string name="reg_et_have_account">Есть аккаунт?</string>
+    <string name="reg_btn_reg">Регистрация</string>
+    <string name="reg_btn_login">Войти</string>
+    <string name="todo">TODO</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--onboarding_fragment_start-->
+    <string name="onb_tv_great">Отлично!</string>
+    <string name="onb_tv_text">Теперь давай я расскажу про наш сервис подробнее</string>
+    <string name="onb_btn_next">Дальше</string>
+
+
+    <!--onboarding_fragment_premium-->
+    <string name="onb_btn_premium">Обновить до Premium</string>
+    <string name="onb_tv_close_premium">Нет, я подключу услугу позже</string>
+
+    <!--onboarding_fragment_spinner-->
+    <string name="tv_tets">Контролируйте то, что вы едите. Автоматический расчет белков, жиров углеводов.</string>
+
+
+    <!--registration_fragment_main-->
+    <string name="reg_tv_hou_copmfortable">Как тебе удобней входить в систему?</string>
+    <string name="reg_tv_contract">Условия предоставления услуг</string>
+    <string name="reg_btn_google">Войти через Google</string>
+    <string name="reg_btn_facebook">Войти через Facebook</string>
+    <string name="reg_btn_reg_email">Регистрация по Email</string>
+
+    <!--registration_fragment_hello-->
+    <string name="reg_tv_hello">Привет!</string>
+    <string name="reg_tv_hello_body">Я твой консультант по питанию. Расскажи мне о себе.</string>
+
 </resources>

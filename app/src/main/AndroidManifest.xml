@@ -24,6 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+
         <meta-data
             android:name="DATABASE"
             android:value="db_user_petals.db" />
@@ -38,7 +39,17 @@
             android:value="com.wsoteam.diet" />
         <activity
             android:name="com.wsoteam.diet.MainScreen.MainActivity"
-            android:label="@string/app_name">
+
+        <activity android:name="com.wsoteam.diet.registration.ActivityRegistration"
+            android:theme="@style/AppThemeNoActionBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.wsoteam.diet.onboarding.ActivityOnboarding"
+            android:theme="@style/AppThemeNoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.wsoteam.diet.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
