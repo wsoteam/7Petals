@@ -9,28 +9,34 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.wsoteam.diet.BranchFoodSearch.ActivitySearch;
 import com.wsoteam.diet.R;
 
-public class FragmentDiary extends Fragment {
-    private FloatingActionButton fabAddFood;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
 
+public class FragmentDiary extends Fragment {
+    private Unbinder unbinder;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.ms_fragment_diary, container, false);
-        fabAddFood = view.findViewById(R.id.fabAddFood);
-
-
-        fabAddFood.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ActivitySearch.class);
-                startActivity(intent);
-            }
-        });
-
+        unbinder = ButterKnife.bind(this, view);
         return view;
+    }
+
+    @OnClick(R.id.fabAddFood)
+    public void onClick() {
+        startActivity(new Intent(getActivity(), ActivitySearch.class));
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 }
