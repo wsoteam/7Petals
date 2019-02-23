@@ -37,19 +37,18 @@
         <meta-data
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.wsoteam.diet" />
-        <activity
-            android:name="com.wsoteam.diet.MainScreen.MainActivity"
 
-        <activity android:name="com.wsoteam.diet.registration.ActivityRegistration"
-            android:theme="@style/AppThemeNoActionBar"
-            android:screenOrientation="portrait">
-        </activity>
 
-        <activity android:name="com.wsoteam.diet.onboarding.ActivityOnboarding"
-            android:theme="@style/AppThemeNoActionBar"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".MainScreen.MainActivity"></activity>
+
         <activity
-            android:name="com.wsoteam.diet.MainActivity">
+            android:name="com.wsoteam.diet.onboarding.ActivityOnboarding"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".registration.ActivityRegistration"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,8 +56,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".BranchFoodSearch.ActivitySearch"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".BranchFoodSearch.ActivitySearch"
+            android:theme="@style/AppTheme.NoActionBar" />
 
 
     </application>

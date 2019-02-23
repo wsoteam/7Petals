@@ -1,5 +1,6 @@
 package com.wsoteam.diet.MainScreen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -15,6 +16,7 @@ import com.wsoteam.diet.MainScreen.Fragments.FragmentPremium;
 import com.wsoteam.diet.MainScreen.Fragments.FragmentProfile;
 import com.wsoteam.diet.MainScreen.Fragments.FragmentRecipes;
 import com.wsoteam.diet.R;
+import com.wsoteam.diet.registration.ActivityRegistration;
 
 import java.util.ArrayList;
 

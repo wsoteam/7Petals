@@ -1,5 +1,6 @@
 package com.wsoteam.diet.onboarding;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,41 +10,41 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.wsoteam.diet.MainScreen.MainActivity;
 import com.wsoteam.diet.R;
 
-public class FragmentOnboardingPremium extends Fragment implements View.OnClickListener{
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
+
+public class FragmentOnboardingPremium extends Fragment {
+    Unbinder unbinder;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         final View view = inflater.inflate(R.layout.onboarding_fragment_premium, null);
-
-        Button premium = (Button) view.findViewById(R.id.btn_prem);
-        TextView noPrem = (TextView) view.findViewById(R.id.tv_prem);
-        noPrem.setClickable(true);
-
-        premium.setOnClickListener(this);
-        noPrem.setOnClickListener(this);
-
+        unbinder = ButterKnife.bind(this, view);
         return view;
     }
 
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()){
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+    @OnClick({R.id.btn_prem, R.id.tv_prem})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
             case R.id.btn_prem:
                 break;
             case R.id.tv_prem:
-//                TextView noPrem = (TextView) v.findViewById(R.id.tv_prem);
-//                noPrem.setTextColor(r);
+                startActivity(new Intent(getActivity(), MainActivity.class));
                 break;
         }
-
-        Toast.makeText(getActivity(), "Вы нажали на кнопку " + v.getId(),
-                Toast.LENGTH_SHORT).show();
     }
 }

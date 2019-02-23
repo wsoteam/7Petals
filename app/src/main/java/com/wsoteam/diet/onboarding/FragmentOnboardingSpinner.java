@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.wsoteam.diet.R;
 
-public class FragmentOnboardingSpinner extends Fragment implements View.OnClickListener{
+public class FragmentOnboardingSpinner extends Fragment implements View.OnClickListener {
 
     @Nullable
     @Override
@@ -29,7 +29,7 @@ public class FragmentOnboardingSpinner extends Fragment implements View.OnClickL
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_spinner_next:
                 Fragment fr_onboardingPrem = new FragmentOnboardingPremium();
                 getFragmentManager().beginTransaction().replace(R.id.fl_onboarding, fr_onboardingPrem).addToBackStack("onboardingPrem_frag").commit();

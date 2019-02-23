@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.wsoteam.diet.R;
 
-public class FragmentOnboardingStart extends Fragment implements View.OnClickListener{
+public class FragmentOnboardingStart extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class FragmentOnboardingStart extends Fragment implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_onboarding_start_next:
                 Fragment fr_onboardingSP = new FragmentOnboardingSpinner();
                 getFragmentManager().beginTransaction().replace(R.id.fl_onboarding, fr_onboardingSP).addToBackStack("onboardingSp_frag").commit();
