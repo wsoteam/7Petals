@@ -1,4 +1,4 @@
-package com.wild.diet;
+package com.wsoteam.diet;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,11 +6,9 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
-import com.wild.diet.onboarding.ActivityOnboarding;
-import com.wild.diet.registration.ActivityRegistration;
+import com.wsoteam.diet.registration.ActivityRegistration;
 
 public class MainActivity extends AppCompatActivity {
 

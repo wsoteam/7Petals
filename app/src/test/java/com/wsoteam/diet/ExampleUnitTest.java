@@ -1,4 +1,4 @@
-package com.wild.diet;
+package com.wsoteam.diet;
 
 import org.junit.Test;
 

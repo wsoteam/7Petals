@@ -1,5 +1,4 @@
-package com.wild.diet.onboarding;
-
+package com.wsoteam.diet.registration;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,19 +10,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.wild.diet.R;
-import com.wild.diet.registration.FragmentRegMain;
+import com.wsoteam.diet.R;
 
-public class FragmentOnboardingStart extends Fragment implements View.OnClickListener{
+public class FragmentRegHello extends Fragment implements View.OnClickListener{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        final View view = inflater.inflate(R.layout.onboarding_fragment_start, null);
-        Button nextBtn = (Button) view.findViewById(R.id.btn_onboarding_start_next);
+        final View view = inflater.inflate(R.layout.registration_fragment_hello, null);
+        Button next = (Button) view.findViewById(R.id.button_hello_next);
 
-        nextBtn.setOnClickListener(this);
-
+        next.setOnClickListener(this);
         return view;
     }
 
@@ -31,13 +28,13 @@ public class FragmentOnboardingStart extends Fragment implements View.OnClickLis
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_onboarding_start_next:
-                Fragment fr_onboardingSP = new FragmentOnboardingSpinner();
-                getFragmentManager().beginTransaction().replace(R.id.fl_onboarding, fr_onboardingSP).addToBackStack("onboardingSp_frag").commit();
+            case R.id.button_hello_next:
+                Fragment fr_regMain = new FragmentRegMain();
+                getFragmentManager().beginTransaction().replace(R.id.fl_registration, fr_regMain).addToBackStack("regMain_frag").commit();
                 break;
-
+            case R.id.button_login:
+                break;
         }
-
         Toast.makeText(getActivity(), "Вы нажали на кнопку " + v.getId(),
                 Toast.LENGTH_SHORT).show();
     }

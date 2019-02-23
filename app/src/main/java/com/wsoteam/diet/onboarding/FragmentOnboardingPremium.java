@@ -1,4 +1,4 @@
-package com.wild.diet.onboarding;
+package com.wsoteam.diet.onboarding;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.wild.diet.R;
+import com.wsoteam.diet.R;
 
 public class FragmentOnboardingPremium extends Fragment implements View.OnClickListener{
 

@@ -1,4 +1,4 @@
-package com.wild.diet.registration;
+package com.wsoteam.diet.registration;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,8 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.wild.diet.R;
-import com.wild.diet.onboarding.ActivityOnboarding;
+import com.wsoteam.diet.R;
+import com.wsoteam.diet.onboarding.ActivityOnboarding;
 
 public class FragmentRegMain extends Fragment implements View.OnClickListener{
     @Nullable

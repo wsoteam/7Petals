@@ -1,4 +1,4 @@
-package com.wild.diet;
+package com.wsoteam.diet;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

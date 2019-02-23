@@ -1,11 +1,11 @@
-package com.wild.diet.onboarding;
+package com.wsoteam.diet.onboarding;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.wild.diet.R;
+import com.wsoteam.diet.R;
 
 public class ActivityOnboarding extends AppCompatActivity {
 

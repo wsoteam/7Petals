@@ -1,4 +1,5 @@
-package com.wild.diet.onboarding;
+package com.wsoteam.diet.onboarding;
+
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,18 +11,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.wild.diet.R;
+import com.wsoteam.diet.R;
 
-public class FragmentOnboardingSpinner extends Fragment implements View.OnClickListener{
-
+public class FragmentOnboardingStart extends Fragment implements View.OnClickListener{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        final View view = inflater.inflate(R.layout.onboarding_fragment_spinner, null);
-        Button next = (Button) view.findViewById(R.id.btn_spinner_next);
+        final View view = inflater.inflate(R.layout.onboarding_fragment_start, null);
+        Button nextBtn = (Button) view.findViewById(R.id.btn_onboarding_start_next);
 
-        next.setOnClickListener(this);
+        nextBtn.setOnClickListener(this);
 
         return view;
     }
@@ -30,10 +30,11 @@ public class FragmentOnboardingSpinner extends Fragment implements View.OnClickL
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_spinner_next:
-                Fragment fr_onboardingPrem = new FragmentOnboardingPremium();
-                getFragmentManager().beginTransaction().replace(R.id.fl_onboarding, fr_onboardingPrem).addToBackStack("onboardingPrem_frag").commit();
+            case R.id.btn_onboarding_start_next:
+                Fragment fr_onboardingSP = new FragmentOnboardingSpinner();
+                getFragmentManager().beginTransaction().replace(R.id.fl_onboarding, fr_onboardingSP).addToBackStack("onboardingSp_frag").commit();
                 break;
+
         }
 
         Toast.makeText(getActivity(), "Вы нажали на кнопку " + v.getId(),
