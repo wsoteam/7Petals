@@ -30,7 +30,7 @@
             android:value="db_user_petals.db" />
         <meta-data
             android:name="VERSION"
-            android:value="2" />
+            android:value="1" />
         <meta-data
             android:name="QUERY_LOG"
             android:value="true" />
@@ -42,11 +42,11 @@
         <activity android:name=".MainScreen.MainActivity"></activity>
 
         <activity
-            android:name="com.wsoteam.diet.onboarding.ActivityOnboarding"
+            android:name="com.wsoteam.diet.Onboarding.ActivityOnboarding"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoActionBar" />
         <activity
-            android:name=".registration.ActivityRegistration"
+            android:name=".Registration.ActivityRegistration"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoActionBar">
             <intent-filter>

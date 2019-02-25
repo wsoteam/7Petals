@@ -1,4 +1,4 @@
-package com.wsoteam.diet.onboarding;
+package com.wsoteam.diet.Onboarding;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,13 +8,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.wsoteam.diet.MainScreen.MainActivity;
 import com.wsoteam.diet.R;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;

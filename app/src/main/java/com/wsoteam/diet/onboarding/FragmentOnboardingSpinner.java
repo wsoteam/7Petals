@@ -1,4 +1,4 @@
-package com.wsoteam.diet.onboarding;
+package com.wsoteam.diet.Onboarding;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

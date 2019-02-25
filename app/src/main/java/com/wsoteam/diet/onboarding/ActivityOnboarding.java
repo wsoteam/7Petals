@@ -1,4 +1,4 @@
-package com.wsoteam.diet.onboarding;
+package com.wsoteam.diet.Onboarding;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

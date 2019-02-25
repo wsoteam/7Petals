@@ -1,4 +1,4 @@
-package com.wsoteam.diet.registration;
+package com.wsoteam.diet.Registration;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

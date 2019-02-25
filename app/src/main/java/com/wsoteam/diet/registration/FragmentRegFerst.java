@@ -1,4 +1,4 @@
-package com.wsoteam.diet.registration;
+package com.wsoteam.diet.Registration;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

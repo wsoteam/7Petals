@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onboarding.ActivityOnboarding">
+    tools:context=".Onboarding.ActivityOnboarding">
     <FrameLayout
         android:id="@+id/fl_onboarding"
         android:layout_width="match_parent"
