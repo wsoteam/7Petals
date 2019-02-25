@@ -57,8 +57,10 @@
         </activity>
 
         <activity
-            android:name=".BranchFoodSearch.ActivitySearch"
+            android:name=".BranchFoodSearch.Activities.ActivitySearch"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".BranchFoodSearch.Activities.ActivityDetailOfFood"/>
 
 
     </application>

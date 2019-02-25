@@ -1,5 +1,6 @@
-package com.wsoteam.diet.BranchFoodSearch;
+package com.wsoteam.diet.BranchFoodSearch.Activities;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -23,6 +24,7 @@ import com.wsoteam.diet.BranchFoodSearch.FoodObjects.FoodConnect;
 import com.wsoteam.diet.BranchFoodSearch.FoodObjects.FoodItem;
 import com.wsoteam.diet.BranchFoodSearch.FoodObjects.ListOfFoodItem;
 import com.wsoteam.diet.BranchFoodSearch.FoodObjects.ListOfGroupsOfFood;
+import com.wsoteam.diet.Config;
 import com.wsoteam.diet.R;
 
 import java.io.InputStream;
@@ -150,9 +152,9 @@ public class ActivitySearch extends AppCompatActivity {
 
         @Override
         public void onClick(View view) {
-                /*Intent intent = new Intent(ActivityListAndSearch.this, ActivityDetailOfFood.class);
-                intent.putExtra("ActivityDetailOfFood", tempListOfGroupsFoods.get(getAdapterPosition()));
-                startActivity(intent);*/
+                Intent intent = new Intent(ActivitySearch.this, ActivityDetailOfFood.class);
+                intent.putExtra(Config.TAG_DETAIL_PRODUCT, tempListOfGroupsFoods.get(getAdapterPosition()));
+                startActivity(intent);
         }
 
         public void bind(FoodItem itemOfGlobalBase, boolean isItemForSeparator) {
