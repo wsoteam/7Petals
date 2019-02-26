@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         listOfFragments.add(new FragmentPremium());
         listOfFragments.add(new FragmentConversation());
 
+
         getSupportFragmentManager().beginTransaction().add(R.id.flFragmentContainer, listOfFragments.get(0)).commit();
     }
 
