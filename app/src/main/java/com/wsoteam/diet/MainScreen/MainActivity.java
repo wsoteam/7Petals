@@ -1,73 +1,67 @@
 package com.wsoteam.diet.MainScreen;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
-import com.wsoteam.diet.MainScreen.Fragments.FragmentConversation;
-import com.wsoteam.diet.MainScreen.Fragments.FragmentDiary;
-import com.wsoteam.diet.MainScreen.Fragments.FragmentPremium;
-import com.wsoteam.diet.MainScreen.Fragments.FragmentProfile;
-import com.wsoteam.diet.MainScreen.Fragments.FragmentRecipes;
+import com.wsoteam.diet.BranchFoodSearch.Activities.ActivitySearch;
 import com.wsoteam.diet.R;
 
-import java.util.ArrayList;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
-    private FrameLayout flFragmentContainer;
-    private ArrayList<Fragment> listOfFragments;
-    private FragmentTransaction transaction;
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            transaction = getSupportFragmentManager().beginTransaction();
-            switch (item.getItemId()) {
-                case R.id.nav_diary:
-                    transaction.replace(R.id.flFragmentContainer, listOfFragments.get(0)).commit();
-                    return true;
-                case R.id.nav_profile:
-                    transaction.replace(R.id.flFragmentContainer, listOfFragments.get(1)).commit();
-                    return true;
-                case R.id.nav_recipes:
-                    transaction.replace(R.id.flFragmentContainer, listOfFragments.get(2)).commit();
-                    return true;
-                case R.id.nav_premium:
-                    transaction.replace(R.id.flFragmentContainer, listOfFragments.get(3)).commit();
-                    return true;
-                case R.id.nav_conversation:
-                    transaction.replace(R.id.flFragmentContainer, listOfFragments.get(4)).commit();
-                    return true;
-            }
-            return false;
-        }
-    };
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    @BindView(R.id.rvListOfBreakfast) RecyclerView rvListOfBreakfast;
+    @BindView(R.id.rvListOfLunch) RecyclerView rvListOfLunch;
+    @BindView(R.id.rvListOfDinner) RecyclerView rvListOfDinner;
+    @BindView(R.id.rvListOfSnacks) RecyclerView rvListOfSnacks;
+    @BindView(R.id.nav_view_g) NavigationView navViewG;
+    @BindView(R.id.drawer_layout) DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ms_activity_main);
-        flFragmentContainer = findViewById(R.id.flFragmentContainer);
-        BottomNavigationView navigation = findViewById(R.id.navigation);
+        ButterKnife.bind(this);
 
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-        listOfFragments = new ArrayList<>();
-        listOfFragments.add(new FragmentDiary());
-        listOfFragments.add(new FragmentProfile());
-        listOfFragments.add(new FragmentRecipes());
-        listOfFragments.add(new FragmentPremium());
-        listOfFragments.add(new FragmentConversation());
-
-
-        getSupportFragmentManager().beginTransaction().add(R.id.flFragmentContainer, listOfFragments.get(0)).commit();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawerLayout, null, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        navViewG.setNavigationItemSelectedListener(this);
     }
 
+    @OnClick(R.id.fabAddFood)
+    public void onViewClicked() {
+        startActivity(new Intent(this, ActivitySearch.class));
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 }

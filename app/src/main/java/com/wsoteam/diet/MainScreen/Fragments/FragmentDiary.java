@@ -45,7 +45,7 @@ public class FragmentDiary extends Fragment {
 
     @OnClick(R.id.fabAddFood)
     public void onClick() {
-        startActivity(new Intent(getActivity(), ActivitySearch.class));
+
         //Log.e("LOL", )
     }
 

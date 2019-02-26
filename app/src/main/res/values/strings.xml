@@ -47,5 +47,11 @@
     <!--registration_fragment_hello-->
     <string name="reg_tv_hello">Привет!</string>
     <string name="reg_tv_hello_body">Я твой консультант по питанию. Расскажи мне о себе.</string>
+    <string name="nav_base">База продуктов</string>
+    <string name="nav_weight_control">Контроль веса</string>
+    <string name="nav_premium_account">Платный аккаунт</string>
+    <string name="nav_settings">Настройки</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
 </resources>
