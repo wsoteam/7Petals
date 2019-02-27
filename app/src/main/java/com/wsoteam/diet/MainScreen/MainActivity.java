@@ -2,7 +2,6 @@ package com.wsoteam.diet.MainScreen;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 
 import com.wsoteam.diet.BranchFoodSearch.Activities.ActivitySearch;
+import com.wsoteam.diet.MainScreen.ListOfEatings.EatingAdapter;
 import com.wsoteam.diet.MainScreen.Loaders.LoadSavedEating;
 import com.wsoteam.diet.MainScreen.POJOEating.Breakfast;
 import com.wsoteam.diet.MainScreen.POJOEating.Dinner;
@@ -21,7 +21,6 @@ import com.wsoteam.diet.MainScreen.POJOEating.Lunch;
 import com.wsoteam.diet.MainScreen.POJOEating.Snack;
 import com.wsoteam.diet.R;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 

@@ -1,4 +1,4 @@
-package com.wsoteam.diet.MainScreen;
+package com.wsoteam.diet.MainScreen.ListOfEatings;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
