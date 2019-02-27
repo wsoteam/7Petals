@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @BindView(R.id.nav_view_g) NavigationView navViewG;
     @BindView(R.id.drawer_layout) DrawerLayout drawerLayout;
     private EatingAdapter breakfastAdapter, lunchAdapter, dinnerAdapter, snackAdapter;
+    public static final String BREAKFAST_TAG = "BREAKFAST_TAG";
+    public static final String LUNCH_TAG = "LUNCH_TAG";
+    public static final String DINNER_TAG = "DINNER_TAG";
+    public static final String SNACK_TAG = "SNACK_TAG";
 
     @Override
     protected void onResume() {
@@ -96,7 +100,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @OnClick(R.id.fabAddFood)
     public void onViewClicked() {
-        startActivity(new Intent(this, ActivitySearch.class));
+        Intent intent = new Intent(this, ActivitySearch.class);
+        intent.putExtra(ActivitySearch.INTENT_CHOISED_EATING, BREAKFAST_TAG);
+        startActivity(intent);
     }
 
     @Override

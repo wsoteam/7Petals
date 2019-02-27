@@ -24,7 +24,6 @@ import com.wsoteam.diet.BranchFoodSearch.FoodObjects.FoodConnect;
 import com.wsoteam.diet.BranchFoodSearch.FoodObjects.FoodItem;
 import com.wsoteam.diet.BranchFoodSearch.FoodObjects.ListOfFoodItem;
 import com.wsoteam.diet.BranchFoodSearch.FoodObjects.ListOfGroupsOfFood;
-import com.wsoteam.diet.Config;
 import com.wsoteam.diet.R;
 
 import java.io.InputStream;
@@ -39,6 +38,7 @@ public class ActivitySearch extends AppCompatActivity {
     private ArrayList<FoodItem> listOfGroupsFoods = new ArrayList<>();
     private ArrayList<FoodItem> tempListOfGroupsFoods = new ArrayList<>();
     private final String TAG_OWN_PRODUCT = "OWN";
+    public static final String INTENT_CHOISED_EATING = "INTENT_CHOISED_EATING";
     private DbAnalyzer dbAnalyzerGlobal = new DbAnalyzer();
     @BindView(R.id.edtActivityListAndSearchCollapsingSearchField) EditText edtSearchField;
     @BindView(R.id.ibActivityListAndSearchCollapsingCancelButton) ImageView ivCancel;
@@ -52,6 +52,7 @@ public class ActivitySearch extends AppCompatActivity {
         setContentView(R.layout.products_activity_searchlist);
         ButterKnife.bind(this);
         rvListOfSearchResponse.setLayoutManager(new LinearLayoutManager(this));
+
         new AsyncLoadFoodList().execute();
     }
 
@@ -64,6 +65,7 @@ public class ActivitySearch extends AppCompatActivity {
         searchAndShowList(s);
     }
 
+    //TODO create package for async task
     private class AsyncLoadFoodList extends AsyncTask<Void, Void, DbAnalyzer> {
         @Override
         protected void onPostExecute(DbAnalyzer dbAnalyzer) {
@@ -153,7 +155,8 @@ public class ActivitySearch extends AppCompatActivity {
         @Override
         public void onClick(View view) {
                 Intent intent = new Intent(ActivitySearch.this, ActivityDetailOfFood.class);
-                intent.putExtra(Config.TAG_DETAIL_PRODUCT, tempListOfGroupsFoods.get(getAdapterPosition()));
+                intent.putExtra(ActivityDetailOfFood.TAG_DETAIL_PRODUCT, tempListOfGroupsFoods.get(getAdapterPosition()));
+                intent.putExtra(INTENT_CHOISED_EATING, getIntent().getStringExtra(INTENT_CHOISED_EATING));
                 startActivity(intent);
         }
 
