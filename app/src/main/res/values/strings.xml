@@ -43,9 +43,19 @@
     <string name="reg_btn_google">Войти через Google</string>
     <string name="reg_btn_facebook">Войти через Facebook</string>
     <string name="reg_btn_reg_email">Регистрация по Email</string>
+    <!--<string name="default_web_client_id">AIzaSyDy9WA42GKsPgE4XjUsHgcluh3OkTBboeo</string>-->
 
     <!--registration_fragment_hello-->
     <string name="reg_tv_hello">Привет!</string>
     <string name="reg_tv_hello_body">Я твой консультант по питанию. Расскажи мне о себе.</string>
+
+    <!--registration_fragment_login-->
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="signed_in">Signed In</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="empty_field">empty_field</string>
+
 
 </resources>

@@ -37,6 +37,8 @@ public class FragmentRegFerst extends Fragment implements View.OnClickListener{
                 getFragmentManager().beginTransaction().replace(R.id.fl_registration, fr_hello).addToBackStack("Hello_frag").commit();
                 break;
             case R.id.button_login:
+                Fragment fr_login = new FragmentRegLogin();
+                getFragmentManager().beginTransaction().replace(R.id.fl_registration, fr_login).addToBackStack("Login_frag").commit();
                 break;
         }
 
