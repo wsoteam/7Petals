@@ -101,6 +101,7 @@ public class FragmentRegLogin extends Fragment implements View.OnClickListener{
                 break;
             case R.id.btn_logout:
                 signOut();
+//                resetPass();
                 break;
         }
 
@@ -161,5 +162,18 @@ public class FragmentRegLogin extends Fragment implements View.OnClickListener{
             return false;
         }
     }
+
+   private void resetPass(){
+        String email = "ny@wsoteam.com";
+       mAuth.sendPasswordResetEmail(email)
+               .addOnCompleteListener(new OnCompleteListener<Void>() {
+                   @Override
+                   public void onComplete(@NonNull Task<Void> task) {
+                       if (task.isSuccessful()) {
+                           Log.d(TAG, "Email sent.");
+                       }
+                   }
+               });
+   }
 
 }

@@ -161,6 +161,7 @@ public class FragmentRegMain extends Fragment implements View.OnClickListener, G
     }
 
 
+
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 

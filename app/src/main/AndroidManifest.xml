@@ -24,7 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".registration.ActivityRegistration"></activity>
 
         <meta-data
             android:name="DATABASE"
@@ -39,15 +39,13 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.wsoteam.diet" />
 
-
-        <activity android:name=".MainScreen.MainActivity"></activity>
-
+        <activity android:name=".MainScreen.MainActivity" />
         <activity
-            android:name="com.wsoteam.diet.onboarding.ActivityOnboarding"
+            android:name=".onboarding.ActivityOnboarding"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoActionBar" />
         <activity
-            android:name=".registration.ActivityRegistration"
+            android:name=".Authenticate.ActivityAuthenticate"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
@@ -56,12 +54,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".BranchFoodSearch.ActivitySearch"
             android:theme="@style/AppTheme.NoActionBar" />
-
-
     </application>
 
 </manifest>
